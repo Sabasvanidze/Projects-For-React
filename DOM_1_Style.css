@@ -1,0 +1,263 @@
+
+:root {
+	--background: #6B7280;
+	--light: #EEE;
+	--dark: #374151;
+	--pink: #EC4899;
+	--darker: #1f2937;
+	--Light-blue: #18A7B5 ;
+	--purple: #8B5Cf6;
+	--light-purple: #CBC3E3;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrap {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+}
+
+.wrap .aside {
+	min-width: 200px;
+	width: 15%;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: var(--background);
+	justify-content: space-between;
+}
+
+.wrap .aside .aside-content .aside-title {
+	color: var(--light);
+}
+
+.wrap .aside .aside-content ul.statistic {
+	color: var(--light);
+	list-style: none;
+	padding: 0;
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.wrap .aside .aside-content ul.statistic li {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+
+.wrap .aside footer {
+	height: 50px;
+	color: var(--light);
+}
+
+.wrap .aside footer p {
+	font-size: 14px;
+}
+
+.wrap .aside footer h5 {
+	color: var(--pink);
+}
+
+.wrap .content {
+	max-width: calc(100vw - 200px);
+	width: 85%;
+	background-color: var(--light);
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.wrap .content .table-container .container-header {
+	background-color: #fff;
+	padding: 15px;
+	border-radius: 5px 5px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.wrap .content .table-container .container-header .table-container-title {
+	color: var(--pink);
+}
+
+.wrap .content .table-container .container-header .actions button {
+    color: var(--pink);
+    width: 8rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.wrap .content .table-container .container-header .actions button:hover{
+	opacity: 0.8;
+}
+.wrap .content .table-container .table {
+	background-color: var(--background);
+	overflow-x: auto;
+	max-width: 100%;
+	box-sizing: border-box;
+	border-radius: 5px;	
+}
+.input-el{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.input-el, .input-student{
+    height: 0.1rem;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 0.1rem;
+    color: var(--light);
+    font-size: 0.8rem;
+}
+.input-el, .input-student::placeholder{
+	color: var(--gray);
+}
+
+.new-student-form, .btn-add-student{
+    color: var(--pink);
+    width: 8rem;
+    height: 2.1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.new-student-form, .btn-add-student:hover{
+	opacity: 0.8;
+}
+.new-student-form, .btn-add-student:active{
+	opacity: 1;
+}
+
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+.edit .delete{
+	margin: 1rem;
+}
+.edit{
+	color: var(--purple);
+
+}
+.delete{
+	color: crimson;
+}
+
+tbody tr td{
+	color: var(--light);
+}
+.wrap .content .table-container .table table {
+	border-spacing: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.wrap .content .table-container .table table tr:nth-child(2n) {
+	background-color: var(--light-purple);
+}
+
+.wrap .content .table-container .table table tr:nth-child(2n + 1) {
+	background-color: var(--background);
+}
+
+.wrap .content .table-container .table table:hover tr:not(:first-child) {
+	opacity: 0.5;
+}
+
+.wrap .content .table-container .table table:hover tr:hover {
+	opacity: 1;
+}
+
+.wrap .content .table-container .table table:hover tr:first-child:hover ~ tr {
+	opacity: 1;
+}
+
+.wrap .content .table-container .table table tr td {
+	padding: 10px;
+	text-align: center;
+}
+
+.wrap .content .table-container .table table tr td:first-child {
+	text-align: left;
+	min-width: 180px;
+}
+
+.wrap .content .table-container .table table tr td:nth-child(2) ~ td {
+	min-width: 70px;
+}
+
+.wrap .content .table-container .table table tr td:nth-child(2) {
+	background-color: var(--dark);
+}
+
+.wrap .content .table-container .table table tr:not(:first-child) td:not(:first-child) {
+	font-weight: bold;
+}
+
+.wrap .content .table-container .table table tr td.light-blue {
+	background-color: var(--Light-blue);
+	cursor: pointer;
+}
+
+.wrap .content .table-container .table table tr td.light-purple {
+	background-color: var(--purple);
+	cursor: pointer;
+}
+
+.wrap .content .table-container .table table tr td.red:hover {
+	background-color: var(--light-purple);
+}
+
+@media all and (max-width: 767px) {
+	body {
+		padding-bottom: 48px;
+	}
+
+	.wrap {
+		flex-direction: column;
+	}
+
+	.wrap .aside {
+		display: block;
+		width: auto;
+		height: auto;
+	}
+
+	.wrap .aside footer {
+		margin-top: 15px;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: var(--background);
+		padding: 10px 20px;
+		height: 50px;
+		box-sizing: border-box;
+	}
+
+	.wrap .content {
+		width: auto;
+		max-width: none;
+		overflow-x: auto;
+	}
+}
+

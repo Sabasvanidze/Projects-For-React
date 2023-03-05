@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project</title>
+
+	<link rel="stylesheet" href="./DOM_1_Style.css">
+
+</head>
+
+<body>
+<div class="wrap">
+	<div class="aside">
+		<div class="aside-content">
+			<h3 class="aside-title">Statistic of Student Results</h3>
+			<ul class="statistic">
+				<li class="total-days">
+					<span class="property">Total Days</span>
+					<span class="value">0</span>
+				</li>
+				<li class="missed-lesson">
+					<span class="property">Missed Lesson</span>
+					<span class="value">0</span>
+				</li>
+				<li class="average-mark">
+					<span class="property">Average mark</span>
+					<span class="value">0.0</span>
+				</li>
+				<li class="total-students">
+					<span class="property">Total Students</span>
+					<span class="value">0</span>
+				</li>
+			</ul>
+		</div>
+        
+	</div>
+	<div class="content">
+		<div class="table-container">
+			<div class="container-header">
+				<span class="table-container-title">Table</span>
+
+				<div class="input-el">
+					<input
+					type="text"
+					placeholder="Student FullName" 
+					class="input-student">
+
+				<div class="new-student-form">
+				   <input 
+				   type="submit"
+				   class="btn-add-student"
+				   value="Add Student"
+					>
+				</div>
+				</div>
+
+				<div class="actions">
+					<button class="btn-add-day">Add Day</button>
+					<button class="btn-remove-day">Remove Day</button>
+				</div>
+			</div>
+			<div class="table">
+				<table class="main-table">
+					<tbody class="student">
+						<tr>
+							<td></td>
+							<td>Average</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="./DOM_1_App.js"></script>
+</body>
+</html>
